@@ -41,10 +41,19 @@ BrandWiki-Package/
 ├── install.sh                  # macOS/Linux 一键安装脚本
 ├── install.bat                 # Windows 一键安装脚本
 ├── agents-rules.txt            # AI 行为规则（写入 AGENTS.md）
-├── brand-wiki-path             # 路径配置模板
+├── brand-wiki-path             # 知识库路径配置文件（见下方说明）
 ├── BrandWiki-操作手册.md        # 完整操作手册
 └── README.md
 ```
+
+### `brand-wiki-path` — 路径配置文件
+
+这是一个只有一行内容的纯文本文件，指定 BrandWiki 知识库在电脑上的实际存放位置。AI 每次操作 Wiki 时先读取此文件获取路径，因此不用把路径写死在技能代码里，每个人可以自定义存放位置。
+
+- **macOS 默认**：`~/BrandWiki/`
+- **Windows 示例**：`D:\BrandWiki\` 或 `C:\Users\zhangsan\Documents\BrandWiki\`
+
+实际部署时，该文件位于 `~/.qoderworkcn/brand-wiki-path`，内容就是一行绝对路径。此仓库中的 `brand-wiki-path` 是该配置文件的模板副本，便于同事参考。
 
 ### 知识库运行时目录结构
 
